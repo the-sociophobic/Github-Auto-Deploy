@@ -1,0 +1,9 @@
+{
+	"port": 8001, 
+	"repositories": 
+	[{
+		"url": "https://github.com/my-repo", 
+		"path": "/var/www/my-repo",
+		"deploy": "sudo service my-repo stop && cd /var/www/my-repo && git pull origin master && sudo kill $(sudo lsof -t -i:3000) && yarn && sudo service my-repo start"
+	}]
+}
