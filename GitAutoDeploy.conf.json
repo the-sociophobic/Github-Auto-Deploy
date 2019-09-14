@@ -4,11 +4,16 @@
 	[{
 		"url": "https://github.com/the-sociophobic/tochka-dostupa-5", 
 		"path": "/var/www/tochka-dostupa-5",
-		"deploy": "cd /var/www/tochka-dostupa-5 && git pull origin master && sudo service tochka-dostupa-5-client stop && sudo kill $(sudo lsof -t -i:3000) && cd client && yarn build && sudo service tochka-dostupa-5-client start"
+		"deploy": "cd /var/www/tochka-dostupa-5 && sudo service tochka-dostupa-5-client stop && sudo kill $(sudo lsof -t -i:3000) && git pull origin master && cd client && yarn build && sudo service tochka-dostupa-5-client start"
 	}, 
 	{
 		"url": "https://github.com/the-sociophobic/Tochka-Dostupa", 
 		"path": "/var/www/Tochka-Dostupa",
-		"deploy": "cd /var/www/Tochka-Dostupa && git pull origin master && sudo service Tochka-Dostupa stop && sudo kill $(sudo lsof -t -i:3003) && yarn build && sudo service Tochka-Dostupa start"
+		"deploy": "cd /var/www/Tochka-Dostupa && sudo service Tochka-Dostupa stop && sudo kill $(sudo lsof -t -i:3003) && git pull origin master && yarn build && sudo service Tochka-Dostupa start"
+	},
+	{
+		"url": "https://github.com/the-sociophobic/NET-logo", 
+		"path": "/var/www/NET-logo",
+		"deploy": "cd /var/www/NET-logo && sudo service NET-logo stop && sudo kill $(sudo lsof -t -i:3010) && git pull origin master && cd parcel && yarn build && sudo service NET-logo start"
 	}]
 }
