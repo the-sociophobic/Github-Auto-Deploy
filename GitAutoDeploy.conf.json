@@ -4,7 +4,7 @@
 	[{
 		"url": "https://github.com/the-sociophobic/tochka-dostupa-5", 
 		"path": "/var/www/tochka-dostupa-5",
-		"deploy": "sudo service tochka-dostupa-5-client stop && sudo service tochka-dostupa-5-server stop && sudo kill $(sudo lsof -t -i:3000); sudo kill $(sudo lsof -t -i:1337); cd /var/www/tochka-dostupa-5 && git pull origin master && cd sails && yarn --ignore-engines && cd ../express && yarn --ignore-engines && cd ../apps/schedule && yarn && yarn build && cd ../apps/zoom-ticket && yarn && yarn build && sudo service tochka-dostupa-5-client start && sudo service tochka-dostupa-5-server start"
+		"deploy": "sudo service tochka-dostupa-5-express stop && sudo service tochka-dostupa-5-sails stop && sudo kill $(sudo lsof -t -i:3000); sudo kill $(sudo lsof -t -i:1337); cd /var/www/tochka-dostupa-5 && git pull origin master && cd sails && yarn --ignore-engines && cd ../express && yarn --ignore-engines && cd ../apps/schedule && yarn && yarn build && cd ../apps/zoom-ticket && yarn && yarn build && sudo service tochka-dostupa-5-express start && sudo service tochka-dostupa-5-sails start"
 	}, 
 	{
 		"url": "https://github.com/the-sociophobic/tochka-dostupa-4", 
