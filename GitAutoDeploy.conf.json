@@ -15,5 +15,10 @@
 		"url": "https://github.com/the-sociophobic/NET-logo", 
 		"path": "/var/www/NET-logo",
 		"deploy": "sudo service NET-logo stop && sudo kill $(sudo lsof -t -i:3010); cd /var/www/NET-logo && git pull origin master && cd parcel && yarn --ignore-engines && yarn build && sudo service NET-logo start"
+	},
+	{
+		"url": "https://github.com/the-sociophobic/not-to-scale", 
+		"path": "/var/www/not-to-scale",
+		"deploy": "cd /var/www/not-to-scale && git pull && yarn run build"
 	}]
 }
